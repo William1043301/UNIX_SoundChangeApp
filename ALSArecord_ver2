@@ -15,10 +15,10 @@ while :
 do
 	echo "Which kind of sound do you want to output?(high or low)"
 	read pitch
-	if [ "${pitch}"="high" ]; then
+	if [ "${pitch}" = "high" ]; then
 		soundstretch out.wav output.wav -pitch=5
 		break
-	elif [ "${pitch}"="low" ]; then
+	elif [ "${pitch}" = "low" ]; then
 		soundstretch out.wav output.wav -pitch=-5
 		break
 	else
