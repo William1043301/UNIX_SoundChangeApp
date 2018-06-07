@@ -19,7 +19,7 @@ do
 		soundstretch out.wav output.wav -pitch=5
 		break
 	elif [ "${pitch}"="low" ]; then
-		soundstretch out.wav output.wav -pitch=-5high
+		soundstretch out.wav output.wav -pitch=-5
 		break
 	else
 		echo $pitch
