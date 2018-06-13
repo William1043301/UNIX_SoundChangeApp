@@ -273,9 +273,11 @@ static void detectBPM(WavInFile *inFile, RunParameters *params)
     }
 }
 /////////////////////////////////////////////////////////////zizshan
-typedef char byte;
-#include<fstream>
-#include<iostream>
+//typedef char byte;
+//#include<fstream>
+//#include<iostream>
+//^^^//debug//^^^///
+////////////////////
 #include<vector>
 template<class T>
 void rev(T *B, int num,int bytepersample) {//switch the sample? right?
