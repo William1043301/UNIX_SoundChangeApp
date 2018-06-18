@@ -53,6 +53,7 @@
 #include <assert.h>
 #include <string.h>
 #include <stdio.h>
+#include <float.h>
 #include "FIFOSampleBuffer.h"
 #include "PeakFinder.h"
 #include "BPMDetect.h"
