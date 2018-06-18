@@ -1,0 +1,29 @@
+#!/bin/sh
+sudo apt-get install alsa-utils
+sudo apt-get install ffmpeg
+./bootstrap
+./configure
+make
+sudo make install
+echo "Please enter the time(sec) you want to record."
+read n
+ffmpeg -f alsa -i hw:0 -t $n out.wav
+wait $n
+echo $high
+echo $low
+while :
+do
+	echo "Which kind of sound do you want to output?(high or low)"
+	read pitch
+	if [ "${pitch}" = "high" ]; then
+		soundstretch out.wav output.wav -pitch=5
+		break
+	elif [ "${pitch}" = "low" ]; then
+		soundstretch out.wav output.wav -pitch=-5
+		break
+	else
+		echo $pitch
+		echo "you enter the wrong word, fuck you"
+	fi
+done
+exit 0
