@@ -87,6 +87,8 @@ class MainWindow(QWidget):
         global inputTime
         self._run_thread.start()
         if setupComple == 0:
+           subprocess.call(['rm out.wav'], shell=True)
+           subprocess.call(['rm output.wav'], shell=True)
            subprocess.call('./ALSAsetup.sh')
         if setupComple == 2:
            os.chmod("record.sh", 0o777)
